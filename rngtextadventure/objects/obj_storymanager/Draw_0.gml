@@ -47,5 +47,6 @@ if (room == rm_playing) {
 	}
 }
 else {
-	draw_text(room_width / 2, room_height / 2, responseText);
+	draw_text_ext(margin, margin, responseText, -1, width);
+	//draw_text(room_width / 2, room_height / 2, responseText);
 }

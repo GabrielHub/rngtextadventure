@@ -10,10 +10,11 @@ choiceAlarm = -1;
 choices = 2;
 input = -1;
 storyOrder = ds_list_create(); //List of all the events, shuffled
-responseText = "";
+globalvar responseText;
 globalvar storyBook; //contains all the events
 globalvar IsGameEnded;
 IsGameEnded = false;
+responseText = "";
 
 /* enum for use in the multidimensional array
 	text is the string of the event
@@ -60,6 +61,8 @@ storyBook[3, story.choice2] = "Turn and run!";
 storyBook[3, story.path1] = 2;
 storyBook[3, story.path2] = 2;
 ds_list_add(storyOrder, 3);
+
+
 
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE
