@@ -54,6 +54,13 @@ storyBook[2, story.path2] = 1;
 storyBook[2, story.txtresponse2] = "The lobster gives you a confused look, then walks away. Your stomach grumbles. \n";
 ds_list_add(storyOrder, 2);
 
+storyBook[3, story.text] = "From the shadows, a curious creature approaches. Is it man? Is it lobster? Let’s find out.";
+storyBook[3, story.choice1] = "Confront this monster of a lobster.";
+storyBook[3, story.choice2] = "Turn and run!";
+storyBook[3, story.path1] = 2;
+storyBook[3, story.path2] = 2;
+ds_list_add(storyOrder, 3);
+
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE
 storyBook[0, story.text] = "The hallway is dark, damp, depressing, yet classy. You need to get out of here.";

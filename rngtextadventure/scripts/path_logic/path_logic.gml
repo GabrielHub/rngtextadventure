@@ -21,16 +21,7 @@ if (pathType == 1) {
 }
 else if (pathType == 2) {
 	//PathType implies dynamic function
-	
-	//unique id 2: lobster eaten path
-	if (currentStoryID == 2) {
-		ret = "It's flesh is delicious and you feel satisfied. You place the shell on your hip and feel midly safer. \n";	
-		ds_list_add(inventory_weapons, 0);
-		globalWeapons[0, weapon.inInventory] = true;
-		if (bestWeapon < globalWeapons[0, weapon.strength]) {
-			bestWeapon = globalWeapons[0, weapon.strength];
-		}
-	}
+	ret = unique_path_check(currentStoryID, pathNumber);
 }
 else if (pathType == 3) {
 	//PathType implies skip to endstate

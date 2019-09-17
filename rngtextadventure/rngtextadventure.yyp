@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "5b1dac33-7cc5-4ef7-9cbf-d34639b13269",
+            "Value": {
+                "id": "22c3869f-da35-49f7-bfbe-7d29d851eb09",
+                "resourcePath": "scripts\\unique_path_check\\unique_path_check.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6a674c6f-c017-4a72-bb4a-ceb6f3c98723",
             "Value": {
                 "id": "c9413c81-8512-44e2-a75d-5058159809d4",
