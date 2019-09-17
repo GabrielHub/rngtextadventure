@@ -8,7 +8,7 @@ var choicePositions = room_height * 0.7;
 if (room == rm_playing) {
 	if (currentStory < ds_list_size(storyOrder)) {
 		//drawing event
-		var textDraw = responseText + string_copy(storyBook[ds_list_find_value(storyOrder, currentStory), story.text], 1, char);
+		var textDraw = string_copy(responseText + storyBook[ds_list_find_value(storyOrder, currentStory), story.text], 1, char);
 		//show_debug_message(textDraw);
 		draw_text_ext(margin, margin, textDraw, -1, width);
 
