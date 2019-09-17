@@ -1,12 +1,19 @@
 /// @description loading story
 
+randomize();
+
 //init variables
 currentStory = 0;
 char = 0;
 textSpeed = 1;
+choiceAlarm = -1;
 choices = 2;
+input = -1;
 storyOrder = ds_list_create(); //List of all the events, shuffled
+responseText = "";
 globalvar storyBook; //contains all the events
+globalvar IsGameEnded;
+IsGameEnded = false;
 
 /* enum for use in the multidimensional array
 	text is the string of the event
@@ -17,6 +24,8 @@ globalvar storyBook; //contains all the events
 		1 means there is a text response
 		2 means check the player for inventory/something else (requires secondary calculation)
 		3 means go to endstate
+		
+	txtresponse1/2 are optional values that contain strings for path responses
 */
 
 enum story {
@@ -24,15 +33,26 @@ enum story {
 	choice1 = 1,
 	choice2 = 2,
 	path1 = 3,
-	path2 = 4
+	path2 = 4,
+	txtresponse1 = 5,
+	txtresponse2 = 6
 }
 //Build all the events below
-storyBook[1, story.text] = "A tapping noise echoes in front of you, but you can't see what it is.";
+storyBook[1, story.text] = "The stench of death hangs around you, and a violent tapping echoes ahead.";
 storyBook[1, story.choice1] = "Rush towards the noise.";
 storyBook[1, story.choice2] = "Turn around.";
 storyBook[1, story.path1] = 3;
 storyBook[1, story.path2] = 0;
+storyBook[1, story.txtresponse1] = "You rush towards your death. \n";
 ds_list_add(storyOrder, 1);
+
+storyBook[2, story.text] = "A lobster appears before you.";
+storyBook[2, story.choice1] = "Eat the lobster.";
+storyBook[2, story.choice2] = "Talk to the lobster.";
+storyBook[2, story.path1] = 2;
+storyBook[2, story.path2] = 1;
+storyBook[2, story.txtresponse2] = "The lobster gives you a confused look, then walks away. Your stomach grumbles. \n";
+ds_list_add(storyOrder, 2);
 
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE

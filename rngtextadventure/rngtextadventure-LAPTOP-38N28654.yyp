@@ -31,11 +31,11 @@
     },
     "resources": [
         {
-            "Key": "0415a6cd-8e69-4a05-86f2-098cc876286f",
+            "Key": "01cd7d64-f72f-4195-ac7c-26f5ab97bda2",
             "Value": {
-                "id": "a227892c-b1e3-436f-b7a1-1402b7cf8669",
-                "resourcePath": "scripts\\path_logic\\path_logic.yy",
-                "resourceType": "GMScript"
+                "id": "78e51cb0-6866-487c-8f1b-09302f975726",
+                "resourcePath": "objects\\GameManager\\GameManager.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -47,27 +47,11 @@
             }
         },
         {
-            "Key": "3e04e239-54b2-479d-8c78-4c1b6b37f013",
-            "Value": {
-                "id": "59704cbe-ab65-46c4-af1f-2b7b72fde5ce",
-                "resourcePath": "objects\\obj_player\\obj_player.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "42552374-5213-45e4-a205-4eae29f7fd76",
             "Value": {
                 "id": "98842a3b-0dc6-4d07-b441-5b975a1eec27",
-                "resourcePath": "rooms\\rm_playing\\rm_playing.yy",
+                "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
-            }
-        },
-        {
-            "Key": "4722c655-991d-4a69-a02f-6a487745bc3a",
-            "Value": {
-                "id": "ff94e7e7-5e25-41d9-9d46-c61099558dfb",
-                "resourcePath": "objects\\obj_weapon\\obj_weapon.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -84,14 +68,6 @@
                 "id": "55e27ecb-1884-436a-9958-3b18c01f54b2",
                 "resourcePath": "views\\566a7c7d-35c3-4235-8478-d36305de3f8e.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "58cafbd3-7154-468f-aafe-44259baf9420",
-            "Value": {
-                "id": "6f114b02-474d-4451-924b-e21212fff157",
-                "resourcePath": "rooms\\rm_gameover\\rm_gameover.yy",
-                "resourceType": "GMRoom"
             }
         },
         {
@@ -132,14 +108,6 @@
                 "id": "a3642499-2924-4219-8fb8-d25f05bd3020",
                 "resourcePath": "views\\9d228897-7400-4638-8287-a34dca906abd.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "a34e4818-b52c-4a33-875f-f99b611f5e53",
-            "Value": {
-                "id": "479e8f0e-8026-4873-aad6-fe34f045bcf7",
-                "resourcePath": "objects\\obj_storymanager\\obj_storymanager.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -232,7 +200,7 @@
         }
     ],
     "script_order": [
-        "0415a6cd-8e69-4a05-86f2-098cc876286f"
+        
     ],
     "tutorial": ""
 }
