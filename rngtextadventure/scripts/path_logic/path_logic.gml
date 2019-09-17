@@ -7,8 +7,6 @@ var currentStoryID = argument0;
 var pathNumber = argument1;
 var pathType = argument2;
 var ret; //return value is the reponse text string
-
-show_debug_message("script working")
  
 if (pathType == 1) {
 	//PathType implies a simple text response
@@ -42,8 +40,10 @@ else {
 	ret = "ERROR: something went wrong in the path_logic script, no reponse text was added";
 }
 
+show_debug_message("isPoisoned= " + string(isPoisoned));
+show_debug_message("Poisoned! Turns until death: " + string(poisonTimer));
 //check poison logic
-if (poisonTimer) {
+if (isPoisoned) {
 	if (poisonTimer == -1) {
 		poisonTimer = poisonTimerMax;
 	}
@@ -52,6 +52,7 @@ if (poisonTimer) {
 		responseText = "The poison has killed you.";
 	}
 	else {
+		show_debug_message("Poisoned! Turns until death: " + string(poisonTimer));
 		poisonTimer--;
 	}
 }
