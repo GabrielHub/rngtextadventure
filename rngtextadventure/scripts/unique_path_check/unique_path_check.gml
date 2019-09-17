@@ -6,6 +6,8 @@ var currentStoryID = argument0;
 var pathNumber = argument1;
 var ret = "ERROR: No text returned in unique_path_check";
 
+var poisonAdd = false;
+
 //unique id 2: lobster eaten path
 if (currentStoryID == 2) {
 	ret = "It's flesh is delicious and you feel satisfied. You place the shell on your hip and feel midly safer. \n";	
@@ -42,8 +44,30 @@ else if (currentStoryID == 3) {
 		ret = "ERROR: story 3 has an invalid path number";	
 	}
 }
+else if (currentStoryID == 4) {
+	ret = "You grab the object and recoil in pain. A sea urchin is violently attached to your hand. You slap it off and hope it isn't poisonous... \n";
+	poisonAdd = true;
+}
+else if (currentStoryID == 5) {
+	ret = "The man thanks you, and leaves with a skip to his step. You just poisoned yourself, and limp on. \n";
+	poisonAdd = true;
+}
 else {
 	ret = "ERROR: currentStoryID did not match any known value, unique_path_check";
+}
+
+//check for poison, reduce poison timer if already poisoned, all that stuff
+if (poisonAdd) {
+	//check if you are already poisoned
+	if (isPoisoned) {
+		//reduce timer by one if already poisoned and not about to die, so stacking poisons quickens death
+		if (poisonTimer > 2) {
+			poisonTimer--;
+		}
+	}
+	else {
+		isPoisoned = true;
+	}
 }
 
 return ret;
