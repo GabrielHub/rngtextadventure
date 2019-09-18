@@ -7,6 +7,7 @@ var pathNumber = argument1;
 var ret = "ERROR: No text returned in unique_path_check";
 
 var poisonAdd = false;
+var poisonCure = false;
 
 //unique id 2: lobster eaten path
 if (currentStoryID == 2) {
@@ -52,11 +53,15 @@ else if (currentStoryID == 5) {
 	ret = "The man thanks you, and leaves with a skip to his step. You just poisoned yourself, and limp on. \n";
 	poisonAdd = true;
 }
+else if (currentStoryID == 6) {
+	ret = "You tap her shoulder and ask her if she’s ok. She bites down hard and toxic black blood leaks from your hand. You look around, but she’s gone. You keep walking. \n";	
+	poisonAdd = true;
+}
 else {
 	ret = "ERROR: currentStoryID did not match any known value, unique_path_check";
 }
 
-//check for poison, reduce poison timer if already poisoned, all that stuff
+//check for POISON, reduce poison timer if already poisoned, all that stuff
 if (poisonAdd) {
 	//check if you are already poisoned
 	if (isPoisoned) {
@@ -67,6 +72,18 @@ if (poisonAdd) {
 	}
 	else {
 		isPoisoned = true;
+	}
+}
+
+//check for POISON cure
+if (poisonCure) {
+	//if already poisoned, use the cure and don't add it to inventory
+	if (isPoisoned) {
+		isPoisoned = false;
+		hasCure--;
+	}
+	else {
+		hasCure++;
 	}
 }
 

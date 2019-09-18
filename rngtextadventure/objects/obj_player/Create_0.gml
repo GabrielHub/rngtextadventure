@@ -8,6 +8,8 @@ inventory_weapons = ds_list_create();
 globalvar isPoisoned;
 globalvar poisonTimer; //make sure to return this to -1 when player is no longer poisoned
 globalvar poisonTimerMax; //how many turns it takes to kill the player
+globalvar hasCure; //if you don't have a cure, it is 0. Cure's stack so it's an int
 isPoisoned = false;
 poisonTimer = -1;
 poisonTimerMax = 8;
+hasCure = 0;

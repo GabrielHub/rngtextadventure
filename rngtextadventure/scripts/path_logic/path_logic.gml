@@ -44,7 +44,13 @@ show_debug_message("isPoisoned= " + string(isPoisoned));
 show_debug_message("Poisoned! Turns until death: " + string(poisonTimer));
 //check poison logic
 if (isPoisoned) {
-	if (poisonTimer == -1) {
+	if (hasCure > 0) {
+		//Check for a cure in your inventory, if it exists, then cure.
+		hasCure--;
+		isPoisoned = false;
+		poisonTimer = -1;
+	}
+	else if (poisonTimer == -1) {
 		poisonTimer = poisonTimerMax;
 	}
 	else if (poisonTimer == 0) {

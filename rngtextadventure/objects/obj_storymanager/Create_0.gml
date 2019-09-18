@@ -78,6 +78,14 @@ storyBook[5, story.path2] = 1;
 storyBook[5, story.txtresponse2] = "He tells you he’ll remember this slight. You remind him he’s dying. \n";
 ds_list_add(storyOrder, 5);
 
+storyBook[6, story.text] = "Up against the wall of the hallway lies a crying girl in a tattered grey tunic, her head in her hands.";
+storyBook[6, story.choice1] = "Attempt to help her.";
+storyBook[6, story.choice2] = "Attack her.";
+storyBook[6, story.path1] = 2;
+storyBook[6, story.path2] = 1;
+storyBook[6, story.txtresponse2] = "You attack swiftly and viciously, bathing the walls with black blood. There is no reward or consequence, just know the game developers are judging you. You keep walking. \n";
+ds_list_add(storyOrder, 5);
+
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE
 storyBook[0, story.text] = "The hallway is dark, damp, depressing, yet classy. You need to get out of here.";
