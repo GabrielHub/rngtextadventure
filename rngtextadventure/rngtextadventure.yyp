@@ -39,11 +39,27 @@
             }
         },
         {
+            "Key": "150c37da-c3f7-40bb-8d1b-3bc1580f62cb",
+            "Value": {
+                "id": "18573663-3816-401b-bfed-832dd5796039",
+                "resourcePath": "scripts\\AddWeapon\\AddWeapon.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "247f666a-7455-46a7-9cf1-4a8aa6f8b8d9",
             "Value": {
                 "id": "0bfeaf4b-afc5-467e-b252-f57156d03118",
                 "resourcePath": "views\\247f666a-7455-46a7-9cf1-4a8aa6f8b8d9.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "26949420-fdcb-4ad0-8eca-90a926346662",
+            "Value": {
+                "id": "8fb22dd8-ce20-49d6-9bb1-9cfbf36a581c",
+                "resourcePath": "scripts\\CureStarving\\CureStarving.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -119,6 +135,14 @@
             }
         },
         {
+            "Key": "8590bd8f-e2d2-4354-a235-e5c85acdfdb1",
+            "Value": {
+                "id": "0f8743e3-6f37-4872-bdea-e78779830fac",
+                "resourcePath": "scripts\\AddPoison\\AddPoison.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8e245703-1d9d-479a-ad50-1956cdacd3cd",
             "Value": {
                 "id": "52c2230a-4995-4134-949d-894812723686",
@@ -140,6 +164,22 @@
                 "id": "a3642499-2924-4219-8fb8-d25f05bd3020",
                 "resourcePath": "views\\9d228897-7400-4638-8287-a34dca906abd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9d7939ba-9cf2-454a-9183-7f69c2beadaa",
+            "Value": {
+                "id": "70eb3b11-90fd-4f14-85f8-694742953795",
+                "resourcePath": "scripts\\affliction_logic\\affliction_logic.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9e1c78aa-ae9f-425f-8700-3f228e416f4d",
+            "Value": {
+                "id": "c3238efc-694c-4fe1-9df0-466b0bb87bfc",
+                "resourcePath": "scripts\\AddStarving\\AddStarving.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -207,6 +247,14 @@
             }
         },
         {
+            "Key": "dc93998d-f9e9-4554-b1aa-ec0708236e29",
+            "Value": {
+                "id": "a8e040f5-cbe6-4de9-80a4-1d25e7ed4cc0",
+                "resourcePath": "scripts\\CurePoison\\CurePoison.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e599c819-f4f2-4c88-a7b0-21dca7d897be",
             "Value": {
                 "id": "a03dd9ca-eb60-462c-9cfa-9c4d82d747ef",
@@ -241,7 +289,13 @@
     ],
     "script_order": [
         "0415a6cd-8e69-4a05-86f2-098cc876286f",
-        "5b1dac33-7cc5-4ef7-9cbf-d34639b13269"
+        "5b1dac33-7cc5-4ef7-9cbf-d34639b13269",
+        "9d7939ba-9cf2-454a-9183-7f69c2beadaa",
+        "150c37da-c3f7-40bb-8d1b-3bc1580f62cb",
+        "8590bd8f-e2d2-4354-a235-e5c85acdfdb1",
+        "dc93998d-f9e9-4554-b1aa-ec0708236e29",
+        "9e1c78aa-ae9f-425f-8700-3f228e416f4d",
+        "26949420-fdcb-4ad0-8eca-90a926346662"
     ],
     "tutorial": ""
 }

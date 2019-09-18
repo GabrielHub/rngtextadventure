@@ -40,32 +40,16 @@ else {
 	ret = "ERROR: something went wrong in the path_logic script, no reponse text was added";
 }
 
-show_debug_message("isPoisoned= " + string(isPoisoned));
-show_debug_message("Poisoned! Turns until death: " + string(poisonTimer));
-//check poison logic
-if (isPoisoned) {
-	if (hasCure > 0) {
-		//Check for a cure in your inventory, if it exists, then cure.
-		hasCure--;
-		isPoisoned = false;
-		poisonTimer = -1;
+//do affliction functions/checks every turn,
+var affliction_ended = affliction_logic();
+if (affliction_ended != -1) {
+	//if affliction isn't -1, it means that an affliction has killed the player. Do end code here
+	IsGameEnded = true;
+	if (affliction_ended == affliction.poison) {
+		responseText = "The poison has spread to your lungs, heart, head, shoulders, knees, and toes. You die. \n\n";
 	}
-	else if (poisonTimer == -1) {
-		poisonTimer = poisonTimerMax;
-	}
-	else if (poisonTimer == 0) {
-		IsGameEnded = true;
-		responseText = "The poison has killed you.";
-	}
-	else {
-		show_debug_message("Poisoned! Turns until death: " + string(poisonTimer));
-		poisonTimer--;
-	}
-}
-else {
-	//if you've been healed, reset the timer
-	if (poisonTimer >= 0) {
-		poisonTimer = -1;
+	else if (affliction_ended == affliction.starving) {
+		responseText = "How long can someone starve? About this long apparently. You've died. \n\n";
 	}
 }
 
