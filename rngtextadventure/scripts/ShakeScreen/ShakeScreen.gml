@@ -5,6 +5,6 @@
 _amt = argument0;
 _dur = argument1;
 
-obj_storymanager.isShaking = true;
-obj_storymanager.shakeAmt = _amt;
-obj_storymanager.shakeTimer = _dur;
+obj_shakemanager.isShaking = true;
+obj_shakemanager.shakeAmt = _amt;
+obj_shakemanager.shakeTimer = _dur;

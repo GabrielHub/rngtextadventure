@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "baa9cda1-2047-4949-b845-d08aefce6f84",
+            "Value": {
+                "id": "fa48bd82-8aba-4555-8ea1-03c3a1ab5978",
+                "resourcePath": "objects\\obj_shakemanager\\obj_shakemanager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c5c8a1f0-246b-4f4f-8d57-b74ed3f74c2b",
             "Value": {
                 "id": "38208c4f-11c1-43ac-a67f-8ebbc161f3de",

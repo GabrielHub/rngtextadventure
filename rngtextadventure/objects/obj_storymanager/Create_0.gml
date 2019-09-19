@@ -17,13 +17,6 @@ globalvar IsGameEnded;
 IsGameEnded = false;
 responseText = "";
 
-//for screenshake effect
-isShaking = false;
-shakeTimer = 0;
-shakeAmt = 0;
-x_shake = 0;
-y_shake = 0;
-
 /* enum for use in the multidimensional array
 	text is the string of the event
 	each event has two choices
@@ -124,6 +117,14 @@ storyBook[10, story.path2] = 1;
 storyBook[10, story.txtresponse1] = "If someoneone has infinite pocket-space they might as well use it right? \n\n";
 storyBook[10, story.txtresponse2] = "You remember how your friends made fun of you for your collecting. You walk with a heavy heart. \n\n";
 ds_list_add(storyOrder, 10);
+
+storyBook[11, story.text] = "On the next step the lights suddenly start flickering, and a shadow towers over you. A minotaur blocks your way!";
+storyBook[11, story.choice1] = "Attack the monster!";
+storyBook[11, story.choice2] = "Run away!";
+storyBook[11, story.path1] = 2;
+storyBook[11, story.path2] = 1;
+storyBook[11, story.txtresponse2] = "You narrowly evade the minotaur with cowardly strength and leave it in your dust! \n\n";
+ds_list_add(storyOrder, 11);
 
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE

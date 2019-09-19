@@ -59,6 +59,17 @@ else if (currentStoryID == 9) {
 		ret = "You pocket the bottle. It whispers sweet nothings. \n\n";
 	}
 }
+else if (currentStoryID == 11) {
+	var i = UseWeapon(bestWeapon, 7);
+	//if i[1] is true, you have defeated the minotaur
+	if (i[1]) {
+		ret = "With a mighty strike the minotaur collapses, showering you in it’s juice. You walk on, every step a squish. \n\n";
+	}
+	else {
+		ret = "You go in for an attack, but the minotaur blocks it with ease, and smashes you to a pulp. You exist now and for eternity as a pile of mush on the floor of a dungeon. \n\n";
+		IsGameEnded = true;
+	}
+}
 else {
 	ret = "ERROR: currentStoryID did not match any known value, unique_path_check";
 }
