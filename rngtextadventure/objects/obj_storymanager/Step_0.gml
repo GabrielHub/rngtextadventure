@@ -25,15 +25,38 @@ if (room == rm_playing) {
 		}
 	}
 	else {
-		show_debug_message("OUT OF STORIES OUT OF INDEX");	
+		//show_debug_message("OUT OF STORIES OUT OF INDEX");	
+		//if you run through all the stories
 		if (keyboard_check_pressed(vk_space)) {
 			game_end();	
 		}
 	}
 }
 else {
-	show_debug_message("Game Over");	
-	if (keyboard_check_pressed(vk_space)) {
-		game_end();	
+	//show_debug_message("Game Over");	
+	if (keyboard_check_pressed(ord("R"))) {
+		room_goto(rm_playing);
+		game_restart();
 	}
+}
+
+//check for screen shake
+if (isShaking) {
+	x_shake = random_range(-shakeAmt, shakeAmt);
+	y_shake = random_range(-shakeAmt, shakeAmt);
+	
+	camera_set_view_pos(view_camera[0], x_shake, y_shake);
+}
+else {
+	camera_set_view_pos(view_camera[0], 0, 0);
+}
+
+if (shakeTimer > 0) {
+	shakeTimer--;
+}
+else {
+	isShaking = false;
+}
+if keyboard_check_pressed(vk_space) {
+	ShakeScreen(15, 25);
 }

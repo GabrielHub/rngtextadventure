@@ -10,11 +10,19 @@ choiceAlarm = -1;
 choices = 2;
 input = -1;
 storyOrder = ds_list_create(); //List of all the events, shuffled
+endGameText = false; //whether or not to display the hidden special message to show you've beaten the game
 globalvar responseText;
 globalvar storyBook; //contains all the events
 globalvar IsGameEnded;
 IsGameEnded = false;
 responseText = "";
+
+//for screenshake effect
+isShaking = false;
+shakeTimer = 0;
+shakeAmt = 0;
+x_shake = 0;
+y_shake = 0;
 
 /* enum for use in the multidimensional array
 	text is the string of the event
@@ -72,10 +80,10 @@ ds_list_add(storyOrder, 4);
 
 storyBook[5, story.text] = "A sickly man is lying on the ground. He tells you he’s been bitten and asks you to suck the poison out.";
 storyBook[5, story.choice1] = "Do what you gotta do.";
-storyBook[5, story.choice2] = "Don’t do anything you don’t have to do.";
+storyBook[5, story.choice2] = "Don't do anything you don’t have to do.";
 storyBook[5, story.path1] = 2;
 storyBook[5, story.path2] = 1;
-storyBook[5, story.txtresponse2] = "He tells you he’ll remember this slight. You remind him he’s dying. \n";
+storyBook[5, story.txtresponse2] = "He tells you he’ll remember this slight. You remind him he’s dying. \n\n";
 ds_list_add(storyOrder, 5);
 
 storyBook[6, story.text] = "Up against the wall of the hallway lies a crying girl in a tattered grey tunic, her head in her hands.";
@@ -83,7 +91,7 @@ storyBook[6, story.choice1] = "Attempt to help her.";
 storyBook[6, story.choice2] = "Attack her.";
 storyBook[6, story.path1] = 2;
 storyBook[6, story.path2] = 1;
-storyBook[6, story.txtresponse2] = "You attack swiftly and viciously, bathing the walls with black blood. There is no reward or consequence, just know the game developers are judging you. You keep walking. \n\n";
+storyBook[6, story.txtresponse2] = "You attack swiftly and viciously, bathing the walls with black blood. There is no reward or consequence, except a little tease of judgement. You keep walking. \n\n";
 ds_list_add(storyOrder, 6);
 
 storyBook[7, story.text] = "There is nothing but the harsh walk ahead. Is anyone really living or are we all just dying forwards?";
@@ -93,7 +101,7 @@ storyBook[7, story.path1] = 0;
 storyBook[7, story.path2] = 0;
 ds_list_add(storyOrder, 7);
 
-storyBook[8, story.text] = "The lights on the ceiling flicker, lighting the path in front of you with every step.";
+storyBook[8, story.text] = "The lights on the ceiling flicker, illuminating the path in front of you as you take each step.";
 storyBook[8, story.choice1] = "Keep walking, but with gusto.";
 storyBook[8, story.choice2] = "Keep walking, but normally.";
 storyBook[8, story.path1] = 0;
@@ -107,6 +115,15 @@ storyBook[9, story.path1] = 2;
 storyBook[9, story.path2] = 1;
 storyBook[9, story.txtresponse2] = "The bottle seems upset. You keep walking. \n\n";
 ds_list_add(storyOrder, 9);
+
+storyBook[10, story.text] = "The weight of this endless walk grows heavier with every step. Literally.";
+storyBook[10, story.choice1] = "Why are your pockets so deep?";
+storyBook[10, story.choice2] = "And why do you just keep everything you find?";
+storyBook[10, story.path1] = 1;
+storyBook[10, story.path2] = 1;
+storyBook[10, story.txtresponse1] = "If someoneone has infinite pocket-space they might as well use it right? \n\n";
+storyBook[10, story.txtresponse2] = "You remember how your friends made fun of you for your collecting. You walk with a heavy heart. \n\n";
+ds_list_add(storyOrder, 10);
 
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE

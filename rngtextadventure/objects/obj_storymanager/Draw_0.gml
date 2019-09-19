@@ -42,11 +42,19 @@ if (room == rm_playing) {
 		}
 	}
 	else {
-		show_debug_message("OUT OF STORIES OUT OF INDEX");
-		draw_text(room_width / 2, room_height / 2, "Out of Stories! Game Over?");
+		//show_debug_message("OUT OF STORIES OUT OF INDEX");
+		draw_text_ext(margin, margin, "You've walked a long time but see a light at the end of the corridor. \n Maybe it is time to finally rest... \n but why can't you? Are you destined to walk this path for the rest of your life? \n You've evaded death at every corner, made it so far... \n And these choices of yours have led to an unending torture. \n\n You must walk these halls of purgatory, not alive, not quite dead either. Just you and your thoughts. \n\n *Press 'Spacebar' to restart!", -1, width);
 	}
 }
 else {
-	draw_text_ext(margin, margin, responseText, -1, width);
-	//draw_text(room_width / 2, room_height / 2, responseText);
+	if (endGameText) {
+		draw_text_ext(margin, margin, "You've walked through your life, and have finally reached the end. Maybe dying wasn't so bad after all for the alternative can be much worse..." + "\n *Press 'R' to restart!", -1, width);
+	}
+	else {
+		draw_text_ext(margin, margin, responseText + "\n *Press 'R' to restart!", -1, width);
+	}
+	
+	if (keyboard_check_pressed(vk_space)) {
+		endGameText = true;
+	}
 }

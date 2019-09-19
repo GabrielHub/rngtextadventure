@@ -8,7 +8,7 @@ var ret = "ERROR: No text returned in unique_path_check";
 
 //unique id 2: lobster eaten path
 if (currentStoryID == 2) {
-	ret = "It's flesh is delicious and you feel satisfied. You place the shell on your hip and feel midly safer. \n\n";	
+	ret = "Its flesh is delicious and you feel satisfied. You place the shell on your hip and feel midly safer. \n\n";	
 	CureStarving();
 	AddWeapon(0);
 }
@@ -21,7 +21,7 @@ else if (currentStoryID == 3) {
 		}
 		else {
 			ret = "The lobster man notices the shell of its brother on your hip, and promptly crushes you into a juice. \n\n";
-			IsGameEnded = true;	
+			IsGameEnded = true;
 		}
 	}
 	else if (pathNumber == 2) {
@@ -41,15 +41,15 @@ else if (currentStoryID == 3) {
 }
 else if (currentStoryID == 4) {
 	ret = "You grab the object and recoil in pain. A sea urchin is violently attached to your hand. You slap it off and hope it isn't poisonous... \n\n";
-	AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
+	ret += AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
 }
 else if (currentStoryID == 5) {
 	ret = "The man thanks you, and leaves with a skip to his step. You just poisoned yourself, and limp on. \n\n";
-	AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
+	ret += AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
 }
 else if (currentStoryID == 6) {
-	ret = "You tap her shoulder and ask her if she’s ok. She bites down hard and toxic black blood leaks from your hand. You look around, but she’s gone. You keep walking. \n\n";	
-	AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
+	ret = "You tap her shoulder and ask her if she’s ok. She bites down hard and toxic black blood leaks from your hand. You look around, but she's gone. You keep walking. \n\n";	
+	ret += AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
 }
 else if (currentStoryID == 9) {
 	if (CurePoison(ds_list_find_index(obj_player.afflictions, affliction.poison))) {
