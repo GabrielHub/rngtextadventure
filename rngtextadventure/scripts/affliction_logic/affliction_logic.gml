@@ -42,6 +42,9 @@ if (isAfflicted) {
 	//apply poison cure if poisoned and a cure if available
 	if (_poisonCured) {
 		show_debug_message("Poison Cured!");
+		obj_player.poisonCure--;
+		ds_list_delete(obj_player.afflictions, affliction.poison);
+		
 		//poison pauses the timer if there is another affliction, but removes the timer if it is the only affliction
 		if (ds_list_empty(obj_player.afflictions)) {
 			obj_player.deathTimer = -1;
@@ -49,8 +52,6 @@ if (isAfflicted) {
 		else {
 			obj_player.deathTimer_pause = true;
 		}
-		obj_player.poisonCure--;
-		ds_list_delete(obj_player.afflictions, affliction.poison);
 	}
 	
 	//apply starving effects if starving
@@ -74,6 +75,9 @@ if (isAfflicted) {
 	//apply starving cure if starving and food is > 0
 	if (_starvingCured) {
 		show_debug_message("Starving Cured!");
+		obj_player.food--;
+		ds_list_delete(obj_player.afflictions, affliction.starving);
+		
 		//starving adds to the timer if there is another affliction, but removes the timer if it is the only affliction
 		if (ds_list_empty(obj_player.afflictions)) {
 			obj_player.deathTimer = -1;
@@ -81,8 +85,6 @@ if (isAfflicted) {
 		else {
 			obj_player.deathTimer += 10; //add 10 turns to the deathtimer if there's another affliction
 		}
-		obj_player.food--;
-		ds_list_delete(obj_player.afflictions, affliction.starving);
 	}
 }
 

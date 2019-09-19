@@ -1,8 +1,17 @@
 ///@description Cures poison affliction
 ///@param index_poison , get position of affliction.poison, for use if it exists or not
 
-//var index_poison = argument0;
+var index_poison = argument0;
 obj_player.poisonCure++;
+
+//if consuming immediately, return true
+if (index_poison != -1) {
+	return true;
+}
+else {
+	return false;
+}
+
 //MOVED poison cure code to the affliction_logic
 /*
 //if already poisoned, (use the cure and don't add it to inventory -- now moved to affliction_logic)

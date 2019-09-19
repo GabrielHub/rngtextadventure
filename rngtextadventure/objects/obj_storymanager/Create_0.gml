@@ -86,6 +86,28 @@ storyBook[6, story.path2] = 1;
 storyBook[6, story.txtresponse2] = "You attack swiftly and viciously, bathing the walls with black blood. There is no reward or consequence, just know the game developers are judging you. You keep walking. \n\n";
 ds_list_add(storyOrder, 6);
 
+storyBook[7, story.text] = "There is nothing but the harsh walk ahead. Is anyone really living or are we all just dying forwards?";
+storyBook[7, story.choice1] = "Keep walking, but lively.";
+storyBook[7, story.choice2] = "Keep walking, but sadly.";
+storyBook[7, story.path1] = 0;
+storyBook[7, story.path2] = 0;
+ds_list_add(storyOrder, 7);
+
+storyBook[8, story.text] = "The lights on the ceiling flicker, lighting the path in front of you with every step.";
+storyBook[8, story.choice1] = "Keep walking, but with gusto.";
+storyBook[8, story.choice2] = "Keep walking, but normally.";
+storyBook[8, story.path1] = 0;
+storyBook[8, story.path2] = 0;
+ds_list_add(storyOrder, 8);
+
+storyBook[9, story.text] = "The hallway feels warmer. A bottle rolls towards you. It smiles, the only way a bottle can?";
+storyBook[9, story.choice1] = "Take the bottle.";
+storyBook[9, story.choice2] = "Ignore the bottle.";
+storyBook[9, story.path1] = 2;
+storyBook[9, story.path2] = 1;
+storyBook[9, story.txtresponse2] = "The bottle seems upset. You keep walking. \n\n";
+ds_list_add(storyOrder, 9);
+
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE
 storyBook[0, story.text] = "You find yourself in a dimly light hallway, extending far in front and behind you.";

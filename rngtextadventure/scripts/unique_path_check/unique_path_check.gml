@@ -51,6 +51,14 @@ else if (currentStoryID == 6) {
 	ret = "You tap her shoulder and ask her if she’s ok. She bites down hard and toxic black blood leaks from your hand. You look around, but she’s gone. You keep walking. \n\n";	
 	AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
 }
+else if (currentStoryID == 9) {
+	if (CurePoison(ds_list_find_index(obj_player.afflictions, affliction.poison))) {
+		ret = "The bottle's smile turns into a silent scream as you consume the liquid within. Your poison is cured! \n\n";
+	}
+	else {
+		ret = "You pocket the bottle. It whispers sweet nothings. \n\n";
+	}
+}
 else {
 	ret = "ERROR: currentStoryID did not match any known value, unique_path_check";
 }
