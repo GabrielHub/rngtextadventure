@@ -48,7 +48,7 @@ if (room == rm_playing) {
 }
 else {
 	if (endGameText) {
-		draw_text_ext(margin, margin, "You've walked through your life, and have finally reached the end. Maybe dying wasn't so bad after all for the alternative can be much worse..." + "\n *Press 'R' to restart!", -1, width);
+		draw_text_ext(margin, margin, "You've walked through your life, and have finally reached the end. You remember what happened before you ended up here, your entire life. This choice lead to death, but the alternative would have been making choices to survive an eternal walk in purgatory." + "\n *Press 'R' to restart!", -1, width);
 	}
 	else {
 		draw_text_ext(margin, margin, responseText + "\n *Press 'R' to restart!", -1, width);

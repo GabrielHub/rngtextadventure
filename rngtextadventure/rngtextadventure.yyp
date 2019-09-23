@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "5be90862-9192-4a00-a9eb-68fd3a79aad9",
+            "Value": {
+                "id": "1e99f363-8a5d-437a-8184-ffee8646c114",
+                "resourcePath": "scripts\\AddBleeding\\AddBleeding.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6a674c6f-c017-4a72-bb4a-ceb6f3c98723",
             "Value": {
                 "id": "c9413c81-8512-44e2-a75d-5058159809d4",
@@ -212,6 +220,14 @@
                 "id": "efddeea1-76a9-4783-8b14-134349a86aa7",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a962004a-1d7a-4437-85b9-f9a59a34714e",
+            "Value": {
+                "id": "5e726b3b-4b96-439d-bf08-43dfc901026b",
+                "resourcePath": "scripts\\CureBleeding\\CureBleeding.yy",
+                "resourceType": "GMScript"
             }
         },
         {

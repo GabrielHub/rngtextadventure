@@ -166,65 +166,16 @@ storyBook[16, story.choice1] = "\"Dialysis.\"";
 storyBook[16, story.choice2] = "\"I wish I didn't pull the plug on my father.\"";
 storyBook[16, story.path1] = 2;
 storyBook[16, story.path2] = 1;
-storyBook[16, story.txtresponse2] = "Nothing happens. You move on. \n\n";
+storyBook[16, story.txtresponse2] = "Yikes. You move on. \n\n";
 ds_list_add(storyOrder, 16);
 
-storyBook[17, story.text] = "The corridor leads into a room and you notice a chest in the corner. It's wooden finish gleams from the light of a nearby lantern.";
-storyBook[17, story.choice1] = "Open the chest.";
-storyBook[17, story.choice2] = "Attack the chest.";
+storyBook[17, story.text] = "";
+storyBook[17, story.choice1] = "\"Dialysis.\"";
+storyBook[17, story.choice2] = "\"I wish I didn't pull the plug on my father.\"";
 storyBook[17, story.path1] = 2;
 storyBook[17, story.path2] = 1;
-storyBook[17, story.txtresponse2] = "It must be a trick! You swing your weapon and furiously hack into the chest, grinding it and its contents to dust. It was not a trick. You slink away embarrassed and continue to the next corridor. \n\n";
+storyBook[17, story.txtresponse2] = "Yikes. You move on. \n\n";
 ds_list_add(storyOrder, 17);
-
-storyBook[18, story.text] = "A pile of bandages are stacked neatly on a shelf by the wall.";
-storyBook[18, story.choice1] = "Ignore them.";
-storyBook[18, story.choice2] = "Bandage your wounds.";
-storyBook[18, story.path1] = 1;
-storyBook[18, story.path2] = 2;
-storyBook[18, story.txtresponse1] = "You eye them suspiciously before moving further down the hall. \n\n";
-ds_list_add(storyOrder, 18);
-
-storyBook[19, story.text] = "The air grows warmer on the next step. A small bottle full of green liquid glimmers on the floor.";
-storyBook[19, story.choice1] = "Drink it.";
-storyBook[19, story.choice2] = "Smash it.";
-storyBook[19, story.path1] = 2;
-storyBook[19, story.path2] = 2;
-ds_list_add(storyOrder, 19);
-
-storyBook[20, story.text] = "You feel your stomach grumble. The hunger and exhaustion is making you nauseous.";
-storyBook[20, story.choice1] = "Think about something else.";
-storyBook[20, story.choice2] = "Think about food.";
-storyBook[20, story.path1] = 2;
-storyBook[20, story.path2] = 2;
-ds_list_add(storyOrder, 20);
-
-storyBook[21, story.text] = "Everything in this place come from different times, maybe different worlds. So why do they all feel so familiar?";
-storyBook[21, story.choice1] = "Forget about it and keep going.";
-storyBook[21, story.choice2] = "Forget about it and turn around.";
-storyBook[21, story.path1] = 0;
-storyBook[21, story.path2] = 0;
-ds_list_add(storyOrder, 21);
-
-storyBook[22, story.text] = "As you walk you realize you've come across this segment before.";
-storyBook[22, story.choice1] = "Leave a mark on the wall.";
-storyBook[22, story.choice2] = "Turn around.";
-storyBook[22, story.path1] = 1;
-storyBook[22, story.path2] = 1;
-storyBook[22, story.txtresponse1] = "You mark the wall on your left and keep going. \n\n";
-storyBook[22, story.txtresponse2] = "Could you be going in circles? \n\n";
-ds_list_add(storyOrder, 22);
-
-/* Template
-storyBook[2, story.text] = "";
-storyBook[2, story.choice1] = "";
-storyBook[2, story.choice2] = "";
-storyBook[2, story.path1] = 2;
-storyBook[2, story.path2] = 1;
-storyBook[2, story.txtresponse1] = " \n\n";
-storyBook[2, story.txtresponse2] = " \n\n";
-ds_list_add(storyOrder, 2);
-*/
 
 ds_list_shuffle(storyOrder);
 //Initial event, make sure to add this to the list last and AFTER THE SHUFFLE

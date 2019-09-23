@@ -22,3 +22,15 @@ globalWeapons[0, weapon.name] = "Lobster Shell";
 globalWeapons[0, weapon.strength] = 1;
 globalWeapons[0, weapon.singleUse] = true;
 globalWeapons[0, weapon.inInventory] = false;
+
+//weaponized word of galifianakis
+globalWeapons[2, weapon.name] = "Weaponized Galifianakis";
+globalWeapons[2, weapon.strength] = 7;
+globalWeapons[2, weapon.singleUse] = true;
+globalWeapons[2, weapon.inInventory] = false;
+
+//mysterious sword (rng)
+globalWeapons[3, weapon.name] = "Mysterious Sword";
+globalWeapons[3, weapon.strength] = irandom_range(1, 10);
+globalWeapons[3, weapon.singleUse] = false;
+globalWeapons[3, weapon.inInventory] = false;
