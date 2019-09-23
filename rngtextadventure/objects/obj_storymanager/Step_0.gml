@@ -2,6 +2,7 @@
 
 if (room == rm_playing) {
 	if (IsGameEnded) {
+		ShakeScreen(10, 15);
 		room_goto(rm_gameover);	
 		show_debug_message("Moving to game over screen");
 	}

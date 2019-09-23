@@ -279,7 +279,7 @@ storyBook[30, story.path2] = 2;
 storyBook[30, story.txtresponse1] = "You leap off the edge of the tree and fall to your death. \n\n";
 ds_list_add(storyOrder, 30);
 
-storyBook[31, story.text] = "A scuttling noise causes you to jump. You turn around to see a cute puppy nuzzling your leg.";
+storyBook[31, story.text] = "A scuttling noise causes you to jump. You turn around to see an adorable puppy nuzzling your leg.";
 storyBook[31, story.choice1] = "Pet the dog.";
 storyBook[31, story.choice2] = "Kick the bitch.";
 storyBook[31, story.path1] = 2;
@@ -315,6 +315,16 @@ storyBook[35, story.path1] = 0;
 storyBook[35, story.path2] = 1;
 storyBook[35, story.txtresponse2] = "You feel like you've seen that dude in movies. But you can't really name any of them. You shrug and keep walking. \n\n";
 ds_list_add(storyOrder, 35);
+
+
+storyBook[36, story.text] = "A paper airplane flies at you.";
+storyBook[36, story.choice1] = "Duck and move on.";
+storyBook[36, story.choice2] = "Catch the plane.";
+storyBook[36, story.path1] = 0;
+storyBook[36, story.path2] = 1;
+storyBook[36, story.txtresponse2] = "You grab the plane out the air. You notice writing on it and unfold it. \"Why won't you die\". You shrug and move on. \n\n";
+ds_list_add(storyOrder, 36);
+
 
 /* Template
 storyBook[3, story.text] = "";

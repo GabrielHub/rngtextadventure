@@ -16,10 +16,25 @@ if (room == rm_playing) {
 		var length = string_length(responseText) + string_length(storyBook[ds_list_find_value(storyOrder, currentStory), story.text]);
 		if (char >= length) {
 			var prevHeight = 0;
+			
+			//color relates to how close to death you are
+			var color;
+			if (obj_player.deathTimer == 6 || obj_player.deathTimer == 5) {
+				color = c_green;
+			}
+			else if (obj_player.deathTimer == 4 || obj_player.deathTimer == 3) {
+				color = c_orange;
+			}
+			else if (obj_player.deathTimer == 2 || obj_player.deathTimer == 1 || obj_player.deathTimer == 0) {
+				color = c_red;
+			}
+			else {
+				color = c_blue;
+			}
 	
 			//alarm, choice selection, and color
 			if (choiceAlarm == 0) {
-				draw_set_color(c_blue);
+				draw_set_color(color);
 			}
 			//choice 1
 			var choiceText = "(1) " + storyBook[ds_list_find_value(storyOrder, currentStory), story.choice1];
@@ -29,7 +44,7 @@ if (room == rm_playing) {
 	
 			//alarm, choice selection, and color
 			if (choiceAlarm == 1) {
-				draw_set_color(c_blue);
+				draw_set_color(color);
 			}
 			//choice 2
 			choiceText = "(2) " + storyBook[ds_list_find_value(storyOrder, currentStory), story.choice2];

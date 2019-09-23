@@ -52,7 +52,7 @@ if (affliction_ended != -1) {
 		ret += "How long can someone starve? About this long apparently. You've died. \n\n";
 	}
 	if (affliction_ended == affliction.bleed) {
-		ret += "You've been bleeding for too long. You succumb to your wounds and die. \n\n";
+		ret += "You have been bleeding for too long. You succumb to your wounds and die. \n\n";
 	}
 }
 

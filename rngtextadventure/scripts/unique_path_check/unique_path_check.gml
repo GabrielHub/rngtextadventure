@@ -63,7 +63,7 @@ else if (currentStoryID == 11) {
 	var i = UseWeapon(7);
 	//if i[1] is true, you have defeated the minotaur
 	if (i[1]) {
-		ret = "The minotaur collapses under the strength of the " + ret[0] + ", showering you in its juice. You walk on, every step a squish. \n\n";
+		ret = "The minotaur collapses under the strength of the " + i[0] + ", showering you in its juice. You walk on, every step a squish. \n\n";
 	}
 	else {
 		ret = "You go in for an attack, but the minotaur blocks it with ease, and smashes you to a pulp. You exist now and for eternity as a pile of mush on the floor of a dungeon. \n\n";
@@ -116,17 +116,17 @@ else if (currentStoryID == 26) {
 }
 else if (currentStoryID == 27) {
 	AddWeapon(4);
-	ret = "With a hefty tug you tear the sign from the corpse. This could make a fine weapon. You lean it on your shoulder and carry on. \n\n";	
+	ret = "With a hefty tug you tear the sign from the corpse. This could make a fine weapon. You hold it on your shoulder and carry on. \n\n";	
 }
 else if (currentStoryID == 28) {
 	var i = UseWeapon(4);
 	//if i[1] is true, you have defeated the monster
 	if (i[1]) {
-		ret = "You swing your " + ret[0] + " and smash the glass on the screen. A key lies within it. You pocket the it and move on. \n\n";
+		ret = "You swing your " + i[0] + " and smash the glass on the screen. A key lies within it. You pocket the it and move on. \n\n";
 		AddWeapon(5);
 	}
 	else {
-		ret = "You swing your " + ret[0] + " but the monster grabs. The weapon splinters in its hands, killing you and breaking the TV. A murder-suicide has ended your story. \n\n";
+		ret = "You swing your " + i[0] + " but the monster grabs it. The weapon splinters in its hands, killing you and breaking the TV. A murder-suicide has ended your story. \n\n";
 		IsGameEnded = true;
 	}
 }
@@ -143,11 +143,11 @@ else if (currentStoryID == 29) {
 	}
 }
 else if (currentStoryID == 30) {
-	ret = "You grab the hatchet and swing at the tree. You cry with each swing. The tree does too. After 7 hours you finally fell the tree. Your hands and soul bloody, you walk across the ravine. \n\n";
+	ret = "You grab the hatchet and swing at the tree. You cry with each chop. The tree does too. After 7 hours you finally fell the tree. Your hands and soul bloody, you walk across the ravine. \n\n";
 	ret += AddBleeding(ds_list_find_index(obj_player.afflictions, affliction.bleed));
 }
 else if (currentStoryID == 31) {
-	ret = "The dog yelps and runs away. Not before biting a significant chunk out of your left thigh. You limp on. \n\n";
+	ret = "The dog yelps and runs away. But not before biting a significant chunk out of your left thigh. You limp on. \n\n";
 	ret += AddBleeding(ds_list_find_index(obj_player.afflictions, affliction.bleed));
 }
 else if (currentStoryID == 32) {
@@ -158,11 +158,11 @@ else if (currentStoryID == 33) {
 	var i = UseWeapon(3);
 	//if i[1] is true, you have defeated the monster
 	if (i[1]) {
-		ret = "A massive centipede jumps out at you! You whip out your " + ret[0] + " and kill it, spraying toxic black blood everywhere. \n\n";
+		ret = "A massive centipede jumps out at you! You whip out your " + i[0] + " and kill it, spraying toxic black blood everywhere. \n\n";
 		ret += AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
 	}
 	else {
-		ret = "A massive centipede jumps out at you! You whip out your " + ret[0] + " and the rest is history. As in you are history. You're dead. \n\n";
+		ret = "A massive centipede jumps out at you! You whip out your " + i[0] + " and the rest is history. As in you are history. You're dead. \n\n";
 		IsGameEnded = true;
 	}
 }
