@@ -140,7 +140,7 @@ storyBook[13, story.choice1] = "\"Can you stop breathing on me?\"";
 storyBook[13, story.choice2] = "\"Why?\"";
 storyBook[13, story.path1] = 1;
 storyBook[13, story.path2] = 1;
-storyBook[13, story.txtresponse1] = "\"Then start running\" it hisses with disdain. \n\n";
+storyBook[13, story.txtresponse1] = "\"Then start running\" it hisses with disdain. You continue at an average pace. \n\n";
 storyBook[13, story.txtresponse2] = "\"Arrogant creature...\" the figure draws a threatening tone. Perhaps it would be best to get going. \n\n";
 ds_list_add(storyOrder, 13);
 
@@ -247,17 +247,84 @@ storyBook[26, story.path2] = 3;
 storyBook[26, story.txtresponse2] = "You grip the sword tight and swing it from the pedestal. The flickering, dim lights that fill these halls shine brighter, acting like a spotlight on this glorious weapon. In fact, it's so bright it blinds you. You drop the sword, trip on the golden handle, and fall upon it. You attempt a dying breath but your lung is punctured and you die, a beautiful sword jutting out your back. \n\n";
 ds_list_add(storyOrder, 26);
 
+storyBook[27, story.text] = "A skeleton lies in front of you. You notice a sign hanging from its neck: \"Don't follow the noise\".";
+storyBook[27, story.choice1] = "Take the sign.";
+storyBook[27, story.choice2] = "Continue on.";
+storyBook[27, story.path1] = 2;
+storyBook[27, story.path2] = 1;
+storyBook[27, story.txtresponse2] = "You thank the skeleton for the advice and keep walking. \n\n";
+ds_list_add(storyOrder, 27);
 
+storyBook[28, story.text] = "Heavy footsteps kill the silence. What appears to be an old TV walks up to you, a golden key displayed on the screen. It cracks its knuckles.";
+storyBook[28, story.choice1] = "Ask it for a key.";
+storyBook[28, story.choice2] = "Attack this monster.";
+storyBook[28, story.path1] = 1;
+storyBook[28, story.path2] = 2;
+storyBook[28, story.txtresponse1] = "There is nothing but the crackle of static. You turn around and walk away. \n\n";
+ds_list_add(storyOrder, 28);
+
+storyBook[29, story.text] = "A door appears on your right. You notice a golden lock on the doorknob.";
+storyBook[29, story.choice1] = "Try to enter.";
+storyBook[29, story.choice2] = "Kick the door down.";
+storyBook[29, story.path1] = 2;
+storyBook[29, story.path2] = 3;
+storyBook[29, story.txtresponse2] = "You wind yourself up, and unleash a furious kick. The door responds in kind, kicking you into oblivion. You died kicking a door. \n\n";
+ds_list_add(storyOrder, 29);
+
+storyBook[30, story.text] = "You come across a great ravine, a giant tree, and a green hatchet. \"Take a leap of faith\", the tree says.";
+storyBook[30, story.choice1] = "Take a leap.";
+storyBook[30, story.choice2] = "Cut the tree down and use it as a bridge.";
+storyBook[30, story.path1] = 3;
+storyBook[30, story.path2] = 2;
+storyBook[30, story.txtresponse1] = "You leap off the edge of the tree and fall to your death. \n\n";
+ds_list_add(storyOrder, 30);
+
+storyBook[31, story.text] = "A scuttling noise causes you to jump. You turn around to see a cute puppy nuzzling your leg.";
+storyBook[31, story.choice1] = "Pet the dog.";
+storyBook[31, story.choice2] = "Kick the bitch.";
+storyBook[31, story.path1] = 2;
+storyBook[31, story.path2] = 2;
+ds_list_add(storyOrder, 31);
+
+storyBook[32, story.text] = "You come across a large chest.";
+storyBook[32, story.choice1] = "Carry on.";
+storyBook[32, story.choice2] = "Open the chest.";
+storyBook[32, story.path1] = 0;
+storyBook[32, story.path2] = 2;
+ds_list_add(storyOrder, 32);
+
+storyBook[33, story.text] = "A rattling chest appears to your left.";
+storyBook[33, story.choice1] = "Open the chest.";
+storyBook[33, story.choice2] = "Ignore the rattling.";
+storyBook[33, story.path1] = 2;
+storyBook[33, story.path2] = 1;
+storyBook[33, story.txtresponse2] = "You decide not to bother and keep walking on. \n\n";
+ds_list_add(storyOrder, 33);
+
+storyBook[34, story.text] = "A pair of dice roll past you.";
+storyBook[34, story.choice1] = "Stop the dice and pick them up.";
+storyBook[34, story.choice2] = "Keep walking.";
+storyBook[34, story.path1] = 2;
+storyBook[34, story.path2] = 0;
+ds_list_add(storyOrder, 34);
+
+storyBook[35, story.text] = "Nothing interesting happening here.";
+storyBook[35, story.choice1] = "Continue walking.";
+storyBook[35, story.choice2] = "Christopher Walken.";
+storyBook[35, story.path1] = 0;
+storyBook[35, story.path2] = 1;
+storyBook[35, story.txtresponse2] = "You feel like you've seen that dude in movies. But you can't really name any of them. You shrug and keep walking. \n\n";
+ds_list_add(storyOrder, 35);
 
 /* Template
-storyBook[2, story.text] = "";
-storyBook[2, story.choice1] = "";
-storyBook[2, story.choice2] = "";
-storyBook[2, story.path1] = 2;
-storyBook[2, story.path2] = 1;
-storyBook[2, story.txtresponse1] = " \n\n";
-storyBook[2, story.txtresponse2] = " \n\n";
-ds_list_add(storyOrder, 2);
+storyBook[3, story.text] = "";
+storyBook[3, story.choice1] = "";
+storyBook[3, story.choice2] = "";
+storyBook[3, story.path1] = 2;
+storyBook[3, story.path2] = 1;
+storyBook[3, story.txtresponse1] = " \n\n";
+storyBook[3, story.txtresponse2] = " \n\n";
+ds_list_add(storyOrder, 3);
 */
 
 ds_list_shuffle(storyOrder);

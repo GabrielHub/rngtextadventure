@@ -15,10 +15,10 @@ if (index_bleed != -1) {
 }
 else {
 	//apply poison affect
-	ds_list_add(obj_player.afflictions, affliction.bleed);
 	if (ds_list_empty(obj_player.afflictions)) {
 		obj_player.deathTimer = obj_player.deathTimer_default;
 	}
+	ds_list_add(obj_player.afflictions, affliction.bleed);
 }
 
 //if you have a cure, return a string 

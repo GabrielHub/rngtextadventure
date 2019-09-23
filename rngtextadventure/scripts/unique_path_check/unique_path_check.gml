@@ -114,6 +114,61 @@ else if (currentStoryID == 24) {
 else if (currentStoryID == 26) {
 	ret = "You carry on your way with your trusty keg, each step a little less stable than the last. \n\n";
 }
+else if (currentStoryID == 27) {
+	AddWeapon(4);
+	ret = "With a hefty tug you tear the sign from the corpse. This could make a fine weapon. You lean it on your shoulder and carry on. \n\n";	
+}
+else if (currentStoryID == 28) {
+	var i = UseWeapon(4);
+	//if i[1] is true, you have defeated the monster
+	if (i[1]) {
+		ret = "You swing your " + ret[0] + " and smash the glass on the screen. A key lies within it. You pocket the it and move on. \n\n";
+		AddWeapon(5);
+	}
+	else {
+		ret = "You swing your " + ret[0] + " but the monster grabs. The weapon splinters in its hands, killing you and breaking the TV. A murder-suicide has ended your story. \n\n";
+		IsGameEnded = true;
+	}
+}
+else if (currentStoryID == 29) {
+	//this story requires the golden key 'weapon' to be in the inventory
+	if (ds_list_find_index(inventory_weapons, 5) == -1) {
+		ret = "The doorknob won't turn. Maybe it needs a key? You decide to move on. \n\n";
+	}
+	else {
+		ret = "You unlock the door with the Golden Key, and find a supply closet. Goodbye afflictions! \n\n";
+		CureStarving();
+		CurePoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
+		CureBleeding(ds_list_find_index(obj_player.afflictions, affliction.bleed));
+	}
+}
+else if (currentStoryID == 30) {
+	ret = "You grab the hatchet and swing at the tree. You cry with each swing. The tree does too. After 7 hours you finally fell the tree. Your hands and soul bloody, you walk across the ravine. \n\n";
+	ret += AddBleeding(ds_list_find_index(obj_player.afflictions, affliction.bleed));
+}
+else if (currentStoryID == 31) {
+	ret = "The dog yelps and runs away. Not before biting a significant chunk out of your left thigh. You limp on. \n\n";
+	ret += AddBleeding(ds_list_find_index(obj_player.afflictions, affliction.bleed));
+}
+else if (currentStoryID == 32) {
+	AddWeapon(6);
+	ret = "You find a massive pen. You agree the pen can be mightier than the sword and move on. \n\n";
+}
+else if (currentStoryID == 33) {
+	var i = UseWeapon(3);
+	//if i[1] is true, you have defeated the monster
+	if (i[1]) {
+		ret = "A massive centipede jumps out at you! You whip out your " + ret[0] + " and kill it, spraying toxic black blood everywhere. \n\n";
+		ret += AddPoison(ds_list_find_index(obj_player.afflictions, affliction.poison));
+	}
+	else {
+		ret = "A massive centipede jumps out at you! You whip out your " + ret[0] + " and the rest is history. As in you are history. You're dead. \n\n";
+		IsGameEnded = true;
+	}
+}
+else if (currentStoryID == 34) {
+	ret = "You pick the dice up. " + string(irandom_range(2, 24)) + "! You don't know what that means. \n\n";	
+}
 else {
 	ret = "ERROR: currentStoryID did not match any known value, unique_path_check";
 }

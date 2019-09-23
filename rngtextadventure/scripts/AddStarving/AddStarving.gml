@@ -6,7 +6,6 @@ var index_starving = argument0;
 var ret = "";
 
 if (index_starving == -1) {
-	ds_list_add(obj_player.afflictions, affliction.starving);
 	if (ds_list_empty(obj_player.afflictions)) {
 		obj_player.deathTimer = obj_player.deathTimer_default;
 	}
@@ -14,6 +13,7 @@ if (index_starving == -1) {
 		//if there's another affliction decrease the time to live
 		obj_player.deathTimer--;
 	}
+	ds_list_add(obj_player.afflictions, affliction.starving);
 }
 
 //if already starving, check for a cure

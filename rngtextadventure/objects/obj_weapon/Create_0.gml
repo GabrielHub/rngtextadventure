@@ -33,3 +33,21 @@ globalWeapons[3, weapon.name] = "Mysterious Sword";
 globalWeapons[3, weapon.strength] = irandom_range(1, 10);
 globalWeapons[3, weapon.singleUse] = false;
 globalWeapons[3, weapon.inInventory] = false;
+
+//Sign taken from skeleton
+globalWeapons[4, weapon.name] = "Stolen Sign";
+globalWeapons[4, weapon.strength] = irandom_range(1, 7);
+globalWeapons[4, weapon.singleUse] = false;
+globalWeapons[4, weapon.inInventory] = false;
+
+//key from tv monster
+globalWeapons[5, weapon.name] = "Golden Key";
+globalWeapons[5, weapon.strength] = irandom_range(1, 3);
+globalWeapons[5, weapon.singleUse] = true;
+globalWeapons[5, weapon.inInventory] = false;
+
+//pen weapon
+globalWeapons[6, weapon.name] = "Mighty Pen";
+globalWeapons[6, weapon.strength] = irandom_range(2, 5);
+globalWeapons[6, weapon.singleUse] = false;
+globalWeapons[6, weapon.inInventory] = false;
