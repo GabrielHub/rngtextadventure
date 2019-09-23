@@ -215,6 +215,40 @@ storyBook[22, story.txtresponse1] = "You mark the wall on your left and keep goi
 storyBook[22, story.txtresponse2] = "Could you be going in circles? \n\n";
 ds_list_add(storyOrder, 22);
 
+storyBook[23, story.text] = "You stumble upon a statue blocking your way.";
+storyBook[23, story.choice1] = "Observe the statue.";
+storyBook[23, story.choice2] = "Ignore the statue.";
+storyBook[23, story.path1] = 3;
+storyBook[23, story.path2] = 1;
+storyBook[23, story.txtresponse1] = "You marvel the detail of the statue and note it appears Greek. You lean in and dust off some of the lettering when the statue topples over you, breaking your neck. \n\n";
+storyBook[23, story.txtresponse2] = "Who cares? You squeeze between the legs of the statue and continue on your way. \n\n";
+ds_list_add(storyOrder, 23);
+
+storyBook[24, story.text] = "A fish lies in front of you. You wonder if it's sushi grade.";
+storyBook[24, story.choice1] = "It sure is.";
+storyBook[24, story.choice2] = "Fish are friends, not food.";
+storyBook[24, story.path1] = 2;
+storyBook[24, story.path2] = 1;
+storyBook[24, story.txtresponse2] = "You step over the fish, leaving its silent screams for help behind. \n\n";
+ds_list_add(storyOrder, 24);
+
+storyBook[25, story.text] = "The path in front of you splits in two.";
+storyBook[25, story.choice1] = "Go right.";
+storyBook[25, story.choice2] = "Go left.";
+storyBook[25, story.path1] = 0;
+storyBook[25, story.path2] = 0;
+ds_list_add(storyOrder, 25);
+
+storyBook[26, story.text] = "Two pedestals appear in front of you. On the left is a keg of beer. On the right is a gleaming sword.";
+storyBook[26, story.choice1] = "You refuse to take one more step sober.";
+storyBook[26, story.choice2] = "Who wouldn't pick up a shiny new sword?";
+storyBook[26, story.path1] = 2;
+storyBook[26, story.path2] = 3;
+storyBook[26, story.txtresponse2] = "You grip the sword tight and swing it from the pedestal. The flickering, dim lights that fill these halls shine brighter, acting like a spotlight on this glorious weapon. In fact, it's so bright it blinds you. You drop the sword, trip on the golden handle, and fall upon it. You attempt a dying breath but your lung is punctured and you die, a beautiful sword jutting out your back. \n\n";
+ds_list_add(storyOrder, 26);
+
+
+
 /* Template
 storyBook[2, story.text] = "";
 storyBook[2, story.choice1] = "";

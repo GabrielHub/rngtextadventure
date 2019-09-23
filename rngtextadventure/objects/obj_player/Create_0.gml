@@ -1,7 +1,7 @@
 /// @description items, inventory, dynamic functions
-globalvar bestWeapon; //holds highest strength value of owned weapon
+globalvar bestWeapon;
 globalvar inventory_weapons;
-bestWeapon = 0; //holds the weapon_id of the strongest weapon in your inventory
+bestWeapon = 1; //holds the weapon_id of the strongest weapon in your inventory
 inventory_weapons = ds_list_create();
 
 //death timer code

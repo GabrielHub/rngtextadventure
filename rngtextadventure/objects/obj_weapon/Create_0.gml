@@ -15,7 +15,6 @@ globalWeapons[1, weapon.name] = "Bare Fists";
 globalWeapons[1, weapon.strength] = 0; //the only weapon that has 0 power
 globalWeapons[1, weapon.singleUse] = false;
 globalWeapons[1, weapon.inInventory] = false;
-AddWeapon(1);
 
 //lobster shell
 globalWeapons[0, weapon.name] = "Lobster Shell";

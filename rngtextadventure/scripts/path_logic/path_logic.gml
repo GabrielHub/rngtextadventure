@@ -46,11 +46,21 @@ if (affliction_ended != -1) {
 	//if affliction isn't -1, it means that an affliction has killed the player. Do end code here
 	IsGameEnded = true;
 	if (affliction_ended == affliction.poison) {
-		responseText = "The poison has spread to your lungs, heart, head, shoulders, knees, and toes. You die. \n\n";
+		ret += "The poison has spread to your lungs, heart, head, shoulders, knees, and toes. You die. \n\n";
 	}
-	else if (affliction_ended == affliction.starving) {
-		responseText = "How long can someone starve? About this long apparently. You've died. \n\n";
+	if (affliction_ended == affliction.starving) {
+		ret += "How long can someone starve? About this long apparently. You've died. \n\n";
+	}
+	if (affliction_ended == affliction.bleed) {
+		ret += "You've been bleeding for too long. You succumb to your wounds and die. \n\n";
 	}
 }
+
+if (ds_list_empty(inventory_weapons)) {
+	AddWeapon(1);
+}
+
+//show_debug_message("Best Weapon ID Name: " + string(globalWeapons[bestWeapon, weapon.name]));
+//show_debug_message("Best Weapon ID: " + string(bestWeapon));
 
 return ret;

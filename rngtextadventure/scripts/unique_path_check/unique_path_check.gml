@@ -107,6 +107,13 @@ else if (currentStoryID == 20) {
 	ret = "Your stomach growls louder. You're so hungry you would even eat at the dining hall. That's a sad thought. \n\n";	
 	ret += AddStarving(ds_list_find_index(obj_player.afflictions, affliction.starving));
 }
+else if (currentStoryID == 24) {
+	CureStarving();
+	ret = "You filet the fish. It tastes just alright. You pocket the leftovers and move on. \n\n";
+}
+else if (currentStoryID == 26) {
+	ret = "You carry on your way with your trusty keg, each step a little less stable than the last. \n\n";
+}
 else {
 	ret = "ERROR: currentStoryID did not match any known value, unique_path_check";
 }
